@@ -1,0 +1,35 @@
+server:
+  port: 8081
+spring:
+  profiles:
+    active: test  # 激活测试环境
+---
+# 测试环境
+server:
+  port: 8088
+spring:
+  config:
+    activate:
+      on-profile: test
+---
+# 开发环境
+server:
+  port: 8084
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+#person:
+#    age: 18
+#    boss: false
+#    birth: 2021/02/28
+#    maps: {k1: v1,k2: v2}
+#    lists:
+#      - lisi
+#      - zhaoliu
+#    dog:
+#      name: 小狗
+#      age: 2
+#    last-name: zhangsan
+
